@@ -1,4 +1,3 @@
-export const URL1 = "http://localhost:3001";
 export const URL = "http://localhost:3001";
 
 export const MINIMUM_PASSWORD_LENGTH = 3;

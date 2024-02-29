@@ -4,7 +4,7 @@ services:
   backend:
     container_name: compose-back-container
     build:
-      context: backend
+      context: ./backend
       dockerfile: Dockerfile
     image: compose-backend-image
     networks:
@@ -19,7 +19,7 @@ services:
   frontend:
     container_name: compose-front-container
     build:
-      context: frontend
+      context: ./frontend
       dockerfile: Dockerfile
     networks:
       - frontend

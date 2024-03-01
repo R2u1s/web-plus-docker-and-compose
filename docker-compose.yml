@@ -15,6 +15,7 @@ services:
       - .env
     depends_on:
       - postgres
+    restart: "unless-stopped"
 
   frontend:
     container_name: compose-front-container
@@ -26,6 +27,7 @@ services:
     image: compose-frontend-image
     ports:
       - 3005:80
+    restart: "unless-stopped"
 
   postgres:
     container_name: postgres
@@ -36,6 +38,7 @@ services:
       - postgres_data:/data/postgres
     env_file:
       - .env
+    restart: "unless-stopped"
 
   adminer:
     networks:
